@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,h1{
+            margin:0;
+        }
+        .app{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: lightblue;
+            font-size: 20px;
+        }
+        .header{
+            height: 60px;
+            width: 100%;
+            background-color: black;
+            color:white;
+            position: absolute;
+        }
+        .container{
+            padding-top: 60px;
+            height: 100%;
+            background-color: rgb(238, 207, 195);
+            box-sizing: border-box;
+            /* overflow: auto; */
+            /* 根据溢出情况自动给滚动条 */
+        }
+        .left{
+            float: left;
+            background-color: rgb(224, 151, 122);
+            width: 300px;
+            padding:20px;
+            box-sizing: border-box;
+            height: 100%;
+            /* 因为外部高度已经设定，所以可以继承 */
+        }
+        .main{
+            overflow: auto;
+            height: 100%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <h1>后台布局界面</h1>
+        </div>
+        <div class="container">
+            <div class="left">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam exercitationem, minima hic quae facere laudantium earum incidunt, assumenda fuga quod id est. Necessitatibus pariatur fugiat, ut id fugit reiciendis animi quis possimus aut corrupti architecto? Inventore quidem tempora, eveniet minima illum ipsum omnis! Animi, totam fugit repellat quam iure nesciunt quaerat quod laboriosam praesentium laudantium ratione ab molestiae nam at reiciendis veritatis adipisci repudiandae commodi rem voluptas. Id explicabo sed qui pariatur voluptatibus mollitia sit in! Distinctio ad quae ipsam deserunt dignissimos odio nisi quam fugit tenetur obcaecati blanditiis iste, atque deleniti possimus, molestias illum magnam beatae dicta, laudantium tempore?
+            </div>
+            <div class="main">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eveniet fugiat cum ipsum repellendus et harum officia vitae nostrum. Odio cumque officiis suscipit culpa id omnis reiciendis itaque non sapiente qui quia, saepe iusto, corporis dignissimos veritatis deleniti amet iste autem! Voluptatum commodi aliquid minus modi aut sapiente sed optio ab? Quos porro soluta eius nemo ipsam assumenda non voluptate suscipit hic! Impedit corporis perferendis nisi in sunt laudantium, iste debitis recusandae, aliquid eius maxime veritatis illo exercitationem quibusdam adipisci incidunt. Excepturi, at. Accusamus doloribus, officiis atque, rerum qui officia suscipit amet soluta necessitatibus, optio eos? In delectus reiciendis at.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

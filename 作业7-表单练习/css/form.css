@@ -1,0 +1,150 @@
+.main{
+    width: 1000px;
+    /* border:1px solid blue; */
+    /* text-align: center; */
+    margin:50px auto;
+    line-height: 1.5;
+    font-family: "PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif";
+}
+.main h1{
+    text-align: center;
+    font-size:38px;
+    position: relative;
+}
+.main h1::before,
+.main h1::after{
+    content:"";
+    position: absolute;
+    width:43%;
+    height:1px;
+    background-color: #ddd;
+    top:29px;
+}
+.main h1::before{
+    left:0;
+}
+.main h1::after{
+    right:0;
+}
+.main .formarea{
+    width: 423px;
+    margin:60px auto;
+}
+.main .formarea .form-item{
+    width: 420px;
+    height: 40px;
+    margin: 40px auto 0;
+    /* border: 1px solid lightblue; */
+    position: relative;
+    
+}
+.main .readme{
+    display: inline-block;
+    margin: 10px 0 4px;
+    font-size: 12px;
+    position: relative;
+}
+.main .readme:hover{
+    cursor: pointer;
+}
+.main .readme a{
+    color:#00a1d6;
+}
+
+/* 按钮样式 */
+.main .formarea .form-item button{
+    width: 100%;
+    line-height: 36px;
+    text-align: center;
+    background-color: #00a1d6;
+    color:white;
+    font-size: 14px;
+    border: 1px solid #00a1d6;
+    box-sizing: border-box;
+    font-family: "PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif";
+    font-weight: bold;
+}
+.main .formarea .form-item button:hover{
+    background-color: #33b4de;
+    border-color: #33b4de;
+}
+.main .formarea .form-item .codenum{
+    width: 130px;
+    height: 36px;
+    position: absolute;
+    right: 2px;
+    top:2px;
+    border: 1px solid #00a1d6;
+    border-radius: 4px;
+}
+
+
+/* 文本框样式 */
+input[type="text"],
+input[type="password"] {
+    /* display: inline-block; */
+    width: 100%;
+    height: 40px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-indent: 1em;
+    line-height: 40px;
+    font-size: 14px;
+    color:#606266;
+    padding:0;
+    font-family: "PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif";
+}
+input[type="text"]:hover,
+input[type="password"]:hover{
+    border-color: #c0c4cc;
+}
+input[type="text"]:focus,
+input[type="password"]:focus{
+    border-color: #00a1d6;
+}
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #ccc;
+}
+
+/* 用div代替select */
+.divselect{
+    width: 120px;
+    height: 40px;
+    border:1px solid #dcdfe6;
+    border-right: none;
+    box-sizing: border-box;
+}
+.divselect select{
+    width: 100%;
+    height: 38px;
+    line-height: 40px;
+    font-family: "PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif";
+    font-size: 14px;
+    color:#606266;
+    padding: 0 10px;
+}
+.form-item .phonenum{
+    width: 300px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0 4px 4px 0;
+}
+.main .formarea .form-item.lastbutton{
+    margin-top: 20px;
+}
+
+.readme input[type="checkbox"]{
+    position: absolute;
+    /* margin-bottom:0; */
+}
+.readme span{
+    position: absolute;
+    width: 400px;
+    left:22px;
+}
+
+
+/* 感悟：乱七八糟…… */

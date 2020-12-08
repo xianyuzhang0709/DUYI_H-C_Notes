@@ -1,0 +1,107 @@
+body{
+    background: url(../img/bg.jpg) no-repeat center top;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    width:1200px;
+    height:70px;
+    background: url(../img/bg_nav.jpg) no-repeat;
+    text-align: center;
+    margin:43px auto;
+    position:relative;
+}
+nav .subnav{
+    float: left;
+    line-height: 68px;
+    color:#f8b700;
+    width: 160px;
+    border:1px solid #3f2a22;
+    border-right:none;
+}
+nav .subnav:nth-child(4){
+    width:232px;
+    border-left:none;
+    border-right:none; 
+}
+nav .subnav:nth-child(3),
+nav .subnav:last-of-type{
+    border-right:1px solid #3f2a22;
+}
+/* nav .subnav:nth-child(6n)::after{
+    content:"";
+    display: block;
+    clear:both;
+} 父元素设定了宽高，也没有别的元素排列，不用清除浮动*/
+nav .logo{
+    position: absolute;
+    width: 232px;
+    height: 134px;
+    background: url(../img/logo.png);
+    left:0px;
+    right:0px;
+    margin:0 auto;
+    top:-48px;
+}
+/* 这个logo是绝对定位，撑不开nav，哦，因为没有解决高度坍塌问题。nav是定宽高的 */
+nav .logo h1{
+    display:none;
+}
+/* 只是告诉浏览器，这是一个logo */
+.btn{
+    margin-top:473px;
+    text-align: center;
+}
+.btn a{
+    display: inline-block;
+    cursor: pointer;
+    width: 320px;
+    height:90px;
+    line-height: 90px;
+    font-size: 32px;
+    font-weight: bold;
+    background: url(../img/btns.png) no-repeat;
+}
+.btn a:nth-child(2){
+    background-position: -320px;
+}
+.btn span{
+    display: none;
+}
+.adv{
+    width: 1202px;
+    height:200px;
+    margin:40px auto 0;
+    font-size: 19px;
+}
+/* adv是个容器盒子，没有设定宽高的话，就适应内容。而我的内容里只有四行字，所以设下面的就没用。 */
+.adv .item{
+    float: left;
+    margin-right:14px;
+}
+.adv .item:nth-child(4){
+    margin-right: 0;
+}
+.adv .item .title{
+    color:#f8b700;
+    width:286px;
+    height:50px;
+    border: 2px solid #3f2a22;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #211510;
+}
+.adv .item .img{
+    width:286px;
+    height:146px;
+    border:2px solid #3f2a22;
+    border-top:none;
+}
+/* img是行块盒， */
+.adv .item .img img{
+    width: 100%;
+    height:100%;
+}
+
+
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+            font-size: 20px;
+            line-height: 2;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        table caption{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        table thead{
+            font-weight: bold;
+            color: white;
+        }
+        table tr th{
+            background-color:blueviolet;
+
+        }
+        table tr td,table tr th{
+            border:1px solid black;
+            line-height: 50px;
+        }
+        table tbody tr:nth-child(even){
+            background-color: cornsilk;
+        }
+        table tbody tr:hover{
+            background-color:lightblue ;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <caption>caption是表格标题</caption>
+        <thead>
+            <tr>
+                <th>表头th-1</th>
+                <th>表头th-2</th>
+                <th>表头th-3</th>
+                <th>表头th-4</th>
+                <th>表头th-5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">单元格td1</td>
+                <td>单元格td2</td>
+                <td>单元格td3</td>
+                <td>单元格td4</td>
+                <td>单元格td5</td>
+            </tr>
+            <tr>
+                <!-- <td>单元格td1</td> -->
+                <td>单元格td2</td>
+                <td>单元格td3</td>
+                <td>单元格td4</td>
+                <td>单元格td5</td>
+            </tr>
+            <tr>
+                <!-- <td>单元格td1</td> -->
+                <td>单元格td2</td>
+                <td>单元格td3</td>
+                <td>单元格td4</td>
+                <td>单元格td5</td>
+            </tr>
+            <tr>
+                <td>单元格td1</td>
+                <td>单元格td2</td>
+                <td>单元格td3</td>
+                <td>单元格td4</td>
+                <td>单元格td5</td>
+            </tr>
+            <tr>
+                <td>单元格td1</td>
+                <td>单元格td2</td>
+                <td>单元格td3</td>
+                <td>单元格td4</td>
+                <td>单元格td5</td>
+            </tr>
+            <tr>
+                <td>单元格td1</td>
+                <td>单元格td2</td>
+                <td>单元格td3</td>
+                <td>单元格td4</td>
+                <td>单元格td5</td>
+            </tr>
+            <tr>
+                <td>单元格td1</td>
+                <td>单元格td2</td>
+                <td>单元格td3</td>
+                <td>单元格td4</td>
+                <td>单元格td5</td>
+            </tr>
+            <tr>
+                <td>单元格td1</td>
+                <td>单元格td2</td>
+                <td>单元格td3</td>
+                <td>单元格td4</td>
+                <td>单元格td5</td>
+            </tr>
+            <tr>
+                <td>单元格td1</td>
+                <td>单元格td2</td>
+                <td>单元格td3</td>
+                <td>单元格td4</td>
+                <td>单元格td5</td>
+            </tr>
+            <tr>
+                <td>单元格td1</td>
+                <td>单元格td2</td>
+                <td>单元格td3</td>
+                <td>单元格td4</td>
+                <td>单元格td5</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <!-- <td></td>
+                <td></td>
+                <td></td>
+                <td></td> -->
+                <td colspan=5>合计：xxx元</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

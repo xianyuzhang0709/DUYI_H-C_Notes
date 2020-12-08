@@ -1,0 +1,53 @@
+body{
+    background-color: #4d4a40;
+    font-family: arial;
+    line-height: 2;
+    /* line-height不能写2em，因为1em是指自己字体的大小，如果元素没有字体大小，则用父元素的，如果一直没有，就用默认值16px*/
+    /* 而如果写2，意思是该属性的应用值是这个无单位数字<数字>乘以该元素的字体大小。 */
+    /* 这样才是实现全局2倍行间距的方法 */
+    min-width: 1000px;
+    /* 额外知识：当窗口小于1000px时，水平滚动条就会出现，比如百度，淘宝 */
+}
+article{
+    background-color: white;
+    width:90%;
+    margin:20px auto;
+    padding-top: 30px;
+}
+article header{
+    background-color: #267890;
+    border:5px solid #14414e;
+    color:white;
+    margin:0 -34px 30px;
+    text-align: center;
+}
+article header h1{
+    font-size:42px;
+    font-weight: bold;
+    color:#fff;
+}
+article header .original_link{
+    color:#dbdbdb;
+    margin-bottom:22px;
+    /* 为什么这里不是30px，为什么要减少数值？因为2倍行距导致这个div元素宽高是字体高度的2倍 */
+}
+article header a{
+    text-decoration: underline;
+}
+article header .original_link:hover{
+    color:#fff;
+}
+article section{
+    width:90%;
+    margin:0 auto;
+}
+section h2{
+    font-size:32px;
+    font-weight:bold;
+    border-top: 1px dotted;
+    border-bottom: 1px dotted;
+}
+article section p{
+    margin:1em 0;
+    /* 实现段落之间空一行 - 这里上下外边距合并 */
+}

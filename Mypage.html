@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Page</title>
+	<!-- <link rel="stylesheet" href="mycss.css"> -->
+	<!-- <link rel="stylesheet" href=""> -->
+	<style>
+		.radio-item .radio{
+		display:inline-block;
+		width:12px;
+		height:12px;
+		border-radius:50%;
+		border:1px solid #999;
+		cursor:pointer;
+		}
+		.radio-item input:checked+.radio{
+		border:1px solid #999;
+		border-color:#008c8c;
+		}
+		.radio-item input:checked+.radio:after{
+		content:"";
+		position:absolute;
+		display:block;
+		width:5px;
+		height:5px;
+		background:#008c8c;
+		margin-left:3.5px;
+		margin-top:3.5px;
+		border-radius:50%;
+		}
+		.radio-item input:checked~span{
+		color:#008c8c;
+		}
+		.radio-item input[type="radio"]{
+		display:none;
+		}
+		
+	</style> 
+</head>
+<body>
+	<label class="radio" for="">
+		<input type="radio">
+		<span>男</span>
+	</label>
+	<label class="radio" for="">
+		<input type="radio">
+		<span>女</span>
+	</label>
+	<!-- <nav>
+		<p>Lorem.</p>
+		<a href="">Lorem.</a>
+		<a href="">Maiores?</a>
+		<a href="">Unde?</a>
+		<a href="">At?</a>
+		<a href="">Aut!</a>
+		<a href="">Consequatur?</a>
+		<a href="">Temporibus.</a>
+		<a href="">Aperiam.</a>
+		<a href="">Rerum?</a>
+		<a href="">Ducimus?</a>
+	</nav> -->
+
+	<!-- <a href="https://baidu.com" target="myframe">百度</a>
+	<iframe name="myframe" src="https://baidu.com" ></iframe>
+	<object data="../img/flashGame.swf" type="application/x-shockwave-flash"></object>
+	<param name="quality" value="high">
+	<embed src="" type=""> -->
+
+		<!-- <select name="" id="">
+			<optgroup label="才艺表演">
+				<option value="">大鹌鹑</option>
+				<option value="">斗鱼</option>
+			</optgroup>
+			<optgroup label="游戏主播">
+				<option value="">意义</option>
+				<option value="">散散</option>
+			</optgroup>
+		</select> -->
+
+		<!-- <input type="radio" name="gender" id="male">
+		<label for="male">男</label>
+		<input type="radio" name="gender" id="female">
+		<label for="female">女</label> -->
+		<!-- 请输入你常用的浏览器
+		<input type="text" name="" list="useragent">
+		<datalist id="useragent">
+			<option value="chrome">谷歌浏览器</option>
+			<option value="safari">苹果浏览器</option>
+		</datalist> -->
+	
+</body>
+</html>
+
+

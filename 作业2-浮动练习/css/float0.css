@@ -1,0 +1,35 @@
+
+*{
+    font-family: arial;
+}
+.clearfix::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+nav{
+    background-color: #47464a;
+    height:60px;
+    min-width: 1200px;
+    text-align: center;
+    /* 块盒里面行盒居中，可以用text-align，但是这里不行 */
+}
+nav .navbar{
+    width:432px;
+    margin:0 auto;
+}
+nav .navbar li{
+    float: left;
+    height: 60px;
+    width:144px;
+    text-align: center;
+    line-height: 60px;;
+    color:#999
+}
+nav .navbar li:hover{
+    color:white;
+}
+.nav .navbar li.selected{
+    color:#ef4238;
+}
+

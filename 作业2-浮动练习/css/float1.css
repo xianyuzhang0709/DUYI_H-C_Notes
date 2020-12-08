@@ -1,0 +1,140 @@
+*{
+    font-family: arial;
+}
+.clearfix::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+main{
+    line-height: 2;
+}
+nav{
+    background-color: #47464a;
+    height:60px;
+    min-width: 1200px;
+    text-align: center;
+    /* 块盒里面行盒居中，可以用text-align，但是这里不行 */
+}
+nav a{
+    line-height: 60px;
+    margin:0 40px;
+    color:#999;
+}
+nav a:hover{
+    color:white;
+}
+nav a.selected{
+    color:#ef4238;
+}
+.container{
+    width:1120px;
+    margin:0 auto;
+}
+.container .search_area{
+    margin-top: 40px;
+    padding:0 20px;
+    border:1px solid #e5e5e5;
+}
+.container .search_area .search_type_box{
+    padding:10px 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+.container .search_area .search_type_box:nth-child(3){
+    border:none;
+}
+.container .search_area .search_type_box .left{
+    float:left;
+}
+.container .search_area .search_type_box .right{
+    margin-left:50px;
+}
+.container .search_area .search_type_box .right a{
+    width: 28px;
+    height: 20px;
+    padding:3px 9px;
+    margin-right: 12px;
+}
+.container .search_area .search_type_box .right a:hover{
+    color:#ef4238;
+}
+.container .search_area .search_type_box .right a.selected{
+    background-color:#f34d41;
+    border-radius: 15px;
+    color:#fff;
+}
+.container .movie_container{
+    margin-top: 50px;
+}
+
+.container .movie_container .movie_item{
+    width:160px;
+    /* height:284px; */
+    float: left;
+    margin:0 32px 0 0;
+    text-align: center;
+}
+.container .movie_container .movie_item:nth-child(6n){
+    margin-right:0;
+}
+.container .movie_container .movie_item img{
+    width:160px;
+}
+.container .movie_container .movie_item .name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 要记住鸭！ */
+}
+
+.container .movie_container .movie_item .score{
+    color:#ffb400;
+    /* font-weight: bold; */
+    font-style: italic;
+    font-size: 24px;
+
+}
+.container .movie_container .movie_item .score:first-letter{
+    font-size:1.5em;
+}
+
+.page{
+    margin:16px 0;
+    text-align: center;
+}
+
+.page a{
+    border:1px solid #d8d8d8;
+    height:30px;
+    padding:8px 12px;
+}
+.page a.selected{
+    background-color: #ef4238;
+    color:white;
+    border:none;
+}
+
+.footer{
+    margin:82px 0 0;
+    text-align: center;
+    background-color: #262426;
+    color:#ccc;
+    padding: 30px 0;
+}
+.footer p a{
+    color:#f34d41;
+}
+
+.footer p span{
+    border:1px solid #ccc;
+    margin:0 7px;
+}
+.footer .foot_pic{
+    margin-top:20px;
+}
+.footer .foot_pic a{
+    margin-right:12px;
+}
+
+/* 问题：img为什么撑不开a？ */
+/* 行块盒模型还是要记住 —— a和img都是行盒，行盒不能设置宽高，可以用高来调整宽度。 */
