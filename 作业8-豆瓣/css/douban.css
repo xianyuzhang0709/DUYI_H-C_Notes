@@ -1,0 +1,594 @@
+body{
+    font-size: 12px;
+    font-family:  Helvetica,Arial,sans-serif;
+    line-height: 1.62;
+}
+/* --- 精简代码区 --- */
+.group .right .cat::after,
+.group .main .group_list .item::after,
+.clearfix::after{
+    content:"";
+    display: block;
+    clear:both;
+}
+section:nth-child(2n){
+    background-color: #f7f7f7;
+}
+.group .a_style:hover,
+.group .right .cat_a:hover,
+.time .time_aside a:hover,
+.read .a_style:hover{
+    color: #fff;
+}
+/* 统一container 宽度 + 居中 + padding + 下margin*/
+.container{
+    width: 950px;
+    margin: 0 auto;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+/* 统一模块内h2...标签样式 + span_for_quote + span和a的size*/
+h2{
+    font: 15px Arial,Helvetica,sans-serif;
+    color: #072;
+    margin: 0 0 12px 0;
+    line-height: 1.5;
+}
+.span_for_quote{
+    color: #666;
+    font-size: 12px;
+}
+/* 统一模块内a标签样式: 蓝色 + hover */
+.a_style{
+    color: #37a;
+}
+.a_style:visited{
+    color: #669;
+}
+.a_style:hover{
+    color: #fff;
+    background-color: #37a;
+}
+/* 统一大标题 左边栏h2标题 */
+.section_title{
+    line-height: 1.5;
+    margin-top: -6px;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+/* 统一left right尺寸和浮动 main的bfc */
+.left{
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+}
+.right{
+    float: right;
+    width: 265px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.main{
+    overflow: hidden;
+}
+.header{
+    width: 1080px;
+    height: 34px;
+    margin:0 auto;
+    /* background-color: lightblue; */
+    margin: 30px auto 25px;
+}
+.header .logo{
+    float: left;
+    width: 160px;
+    height: 34px;
+    background: url(../imgs/logo_db.png) no-repeat;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.header .logo a{
+    display: block;
+    height: 34px;
+    line-height: 10em;
+}
+.header .headform{
+    float: left;
+    height: 30px;
+    width: 270px;
+    border: 1px solid #c3c3c3;
+    position: relative;
+    margin: 1px 0;
+}
+.headform input[type="text"]{
+    display: inline-block;
+    width: 240px;
+    height: 30px;
+    box-sizing: border-box;
+    border: none;
+    padding: 5px;
+}
+/* headform的input样式 */
+.headform input[type="text"]:focus{
+    outline:none;
+}
+.headform input[type="text"]::placeholder{
+    color:#e4e6e5;
+}
+.headform button[type="button"]{
+    position: absolute;
+    right:0;
+    top:0;
+    width: 26px;
+    height: 30px;
+    box-sizing: border-box;
+    background: url(../imgs/bn_srh_1.png) no-repeat 50% 50%;
+    border:none;
+    cursor: pointer;
+}
+.header .nav{
+    float:right;
+    margin-top: 6px;
+}
+.header .nav a{
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin: 0 14px 0 0;
+    background: url(../imgs/anony_nav_logo.png);
+    line-height: 10em;
+    overflow: hidden;
+}
+.header .nav a:nth-last-child(){
+    margin: 0;
+}
+.header .nav .sec{
+    background-position: -60px;
+}
+.header .nav .thi{
+    background-position: -121px;
+}
+.header .nav .fou{
+    background-position: -181px;
+}
+.header .nav .fiv{
+    background-position: -240px;
+}
+.header .nav .six{
+    background-position: -301px;
+}
+.header .nav .sev{
+    background-position: -360px;
+}
+.header .nav .eig{
+    background: url(../imgs/ic_shijian_home_nav.png);
+    /* background-position: -420px; */
+}
+.header .nav .nin{
+    background-position: right;
+}
+/* ----- register section ------ */
+.register{
+    height: 304px;
+    background: url(../imgs/rigister_background.png) no-repeat  #edf4ed;
+    background-size: contain;
+    background-position: 25%;
+    margin-bottom: 25px;
+}
+.register .reg_container{
+    height: 100%;
+    width: 950px;
+    margin: 0 auto;
+    /* background-color: seashell; */
+    position: relative;
+}
+.register .reg_container .reg_area{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: lightblue;
+}
+/* 绝对定位 是以接下来的位置点为起始坐标，设置right top等值来调整位置*/
+.register .reg_container .app{
+    width: 150px;
+    height: 120px;
+    position: absolute;
+    right: 300px;
+    top: 92px;
+    /* background-color: lightcoral; */
+}
+.register .reg_container .app p{
+    height: 25px;
+    color: rgb(17, 17, 17);
+    font-size: 25px;
+    line-height: 24px;
+    margin: 7px 0 25px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.register .reg_container .app span{
+    color: #111;
+    margin-left: 10px;
+    font-weight: 100;
+}
+.register .reg_container .app a{
+    font-size: 12px;
+    padding: 9px 21px;
+    border: 2px;
+    border-radius: 2px;
+    background-color: #00B51D;
+    color: #fff;
+}
+
+/* ----- hot section ------ */
+.hot .container{
+    padding: 10px 0;
+}
+.hot .first_adv{
+    display: block;
+    width: 100%;
+    height: 90px;
+    margin-bottom: 10px;
+    background: url(../imgs/hot_adv.jpg) no-repeat;
+    background-size: cover;
+}
+.hot .aside{
+    float: right;
+    width: 265px;
+    margin-left: 30px;
+}
+.hot .hot_aside_adv{
+    background: url(../imgs/hot_aside_adv.jpg) no-repeat;
+    background-size: cover;
+    width: 250px;
+    height: 125px;
+    margin: 10px 15px 20px 0;
+}
+    /* hot:aside:topic模块 */
+.hot .hot_topic .hot_topic_item{
+    margin:10px 0 15px;
+}
+.hot .hot_topic .hot_topic_item a{
+    font-size: 14px;
+}
+.hot .hot_topic .hot_topic_item span{
+    display: block;
+    color: #999;
+    font-size: 13px;
+}
+    /* hot:main:hot模块 */
+.hot .albums{
+    float: left;
+    width: 350px;
+    margin-right: 30px;
+}
+.hot .albums .album_list{
+    margin-left: -10px;
+    margin-top: -10px;
+}
+.hot .albums .album_list .alb_item{
+    float: left;
+    width: 170px;
+    margin: 10px 0 0 10px;
+
+}
+.hot .albums .album_list .alb_item img{
+    width: 170px;
+    height: 170px;
+}
+.hot .albums .album_list .alb_item span{
+    color: #999;
+}
+    /* hot:main:note模块 */
+.hot .main .hot_notes{
+    overflow: hidden;
+}
+.hot .main .hot_notes .hot_note_item{
+    margin-top: 12px;
+}
+.hot .main .hot_notes .hot_note_item .author{
+    color: #999;
+}
+.hot .main .hot_notes .hot_note_item p{
+    color: #666;
+}
+/* ----- time section ----- */
+.time .container{
+    padding: 40px 0 20px 0;
+}
+.time .time_aside{
+    float: left;
+    width: 100px;
+    margin-right: 20px;
+}
+.time .time_aside a{
+    color: #494949;
+}
+.time .time_list{
+    overflow: hidden;
+}
+.time .time_list .time_item{
+    float: left;
+    width: 100px;
+    margin-right: 60px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.time .time_list .time_item .img{
+    display: block;
+    position: relative;
+    width: 100px;
+}
+/* 这里的问题是，icon需要阴影才能显示清晰，否则不清楚 */
+.time .time_list .time_item .img .icon{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 9px;
+    bottom: 15px;
+    /* background-color: red; */
+}
+.time .time_list .time_item img{
+    width: 100%;
+    height: 141px%;
+    margin-bottom: 10px;
+}
+/* 这里遇到问题，字体设置13以上，第二行第一个item就挤到了第一行最后一个下面 */
+.time .time_list .time_item .a_style{
+    color: #333;
+    /* font-size: 13px; */
+    line-height: 1.38;
+}
+.time .time_list .time_item .a_style:hover{
+    color:#fff;
+}
+.time .time_list .time_item h3{
+    line-height: 1;
+    margin-top: 10px;
+    color: #999;
+}
+/* ----- movie section----- */
+.movie .left h2 a{
+    color: #27a;
+}
+.movie .left .movie_left_ul li{
+    font-size: 14px;
+    margin-top: 5px;
+}
+.movie .left .movie_left_ul li img{
+    position: relative;
+    top: -5px;
+    left: 3px;
+}
+.movie .right .movie_cate{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.movie .right .movie_cat li{
+    float: left;
+    width: 4em;
+    margin-top: 5px;
+}
+.movie .right .recent{
+    width: 100%;
+}
+/* 这里li type设置 */
+.movie .right .recent .recent_list .item{
+    margin-bottom: 6px;
+    padding-bottom: 5px;
+    list-style-type: decimal;
+    list-style-position: inside;
+    border-bottom: 1px solid #eaeaea;
+}
+.movie .right .recent .recent_list .item a{
+    margin-left: 5px;
+}
+.movie .main .movie_list .item{
+    margin-bottom: 20px;
+    text-align: center;
+    width: 24.8%;
+    float: left;
+}
+.movie .main .movie_list .item .img{
+    width: 100px;
+    height: 140px;
+    margin: 0 auto 15px auto;
+}
+.movie .main .movie_list .item .img img{
+    width: 100%;
+    height: 100%;
+}
+.movie .main .movie_list .item .title{
+    line-height: 1.45;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 103px;
+    margin: 0 auto 4px auto;
+}
+/* 雪碧图：背景图的位移 - background-position: x轴50px y轴150px; */
+/* 本雪碧图，高121，每一层高度11px 用y轴负数 */
+.movie .main .movie_list .item  .ranking .star{
+    display: inline-block;
+    width: 55px;
+    height: 11px;
+    background: url(../imgs/icon/ic_rating_s.png) no-repeat;
+}
+/* 这里不能用:nth-child 因为不是子元素 更好的办法就是写新的类属性加进html元素中去 */
+/* 这里，只写.star80权重不够，必须把前面的类选择器都加上 同权重写在后面的有效 */
+.movie .main .movie_list .item  .ranking .star80{
+    background-position: 0 -22px;
+}
+.movie .main .movie_list .item  .ranking .star75{
+    background-position: 0 -33px;
+}
+.movie .main .movie_list .item  .ranking .star60{
+    background-position: 0 -44px;
+}
+.movie .main .movie_list .item  .ranking .star40{
+    background-position: 0 -66px;
+}
+.movie .main .movie_list .item .ranking i{
+    margin-left: 4px;
+    color: #e09015;
+}
+.movie .main .movie_list .item a{
+    display: inline-block;
+    width: 48px;
+    height: 19px;
+    padding: 2px 10px;
+    border-radius: 2px;
+    background-color: #1c8bd0;
+    color: #fff;
+    line-height: 19px;
+}
+.movie .main .movie_list .item a:hover{
+    background-color: #047fcb;
+}
+/* ----- group section----- */
+.group .container{
+    padding: 40px 0 20px 0;
+    margin-bottom: 30px;
+}
+.group .a_style{
+    color: #046f7a;
+}
+.group .left .left_nav .item{
+    margin-top: 5px;
+    font-size: 14px;
+}
+.group .right .cat_a{
+    font-size: 14px;
+    color: #333;
+}
+.group .right .cat{
+    width: 100%;
+    margin-left: -10px;
+    margin-bottom: 10px;
+}
+.group .right .cat li{
+    float: left;
+    width: 24px;
+    margin-left: 10px;
+}
+.group .right .cat li:nth-child(1){
+    width: 100%;
+    margin: 0 0 2px 10px;
+}
+/* 笔记：查找替换，把所有的"社会$"改为“社会”，使用regular expression "社会\d"即可找到所有对应结果 */
+.group .main .group_list .item{
+    float: left;
+    width: 248px;
+    margin: 30px 0 0 0;
+    color: #999;
+    text-align: left;
+}
+.group .main .group_list .item img{
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin: 0 10px 10px 0;
+}
+.group .main .group_list .item .title{
+    margin-bottom: 5px;
+    font-size: 13px;
+    line-height: 1.45;
+}
+/* read section */
+.read .a_style{
+    color: #614e3c;
+}
+.read .left ul li{
+    margin-top: 5px;
+    font-size: 14px;
+}
+.read .left ul li img{
+    position: relative;
+    left: 3px;
+    top: -5px;
+}
+.read .left ul li:last-child{
+    margin-top: 30px;
+}
+.read .left ul li .img{
+    display: inline-block;
+    width: 49px;
+    height: 50px;
+    background: url(../imgs/icon/app_icons_50_10.jpg) no-repeat;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #999;
+    background-position: -1px;
+}
+.read .right .read_tag{
+    margin: 9px 0 10px -10px;
+    border-bottom: 1px solid #eaeaea;
+}
+.read .right .read_tag li{
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+.read .right .read_tag .first_item{
+    color: #999;
+}
+.read .main .book_stack{
+    margin-bottom: 30px;
+}
+.read .main ul li{
+    width: 24.8%;
+    text-align: center;
+    float: left;
+}
+.read .main ul li img{
+    width: 100px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+.read .main ul li .title{
+    display: block;
+    line-height: 1.45;
+    margin-bottom: 4px;
+}
+.read .main ul li .btn{
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 2px;
+    background-color: #999a95;
+    color: #fff;
+    margin-top: 2px;
+}
+.read .main ul li .btn:hover{
+    background-color: #878882;
+}
+.read .main .book_stack .free{
+    display: inline-block;
+    margin-bottom: 4px;
+    color: #666;
+}
+
+
+
+
+footer .hr{
+    width: 100%;
+    border-top: 1px dashed #dcdcdc;
+    margin-bottom: 14px;
+    margin-top: 30px;
+}
+footer .left{
+    float: left;
+    color: #999;
+}
+footer .left span img{
+    vertical-align: text-bottom;
+}
+footer .f_left{
+    float: right;
+}
+footer .f_right img{
+    width: 150px;
+    height: 63px;
+    margin-top: 20px;
+}

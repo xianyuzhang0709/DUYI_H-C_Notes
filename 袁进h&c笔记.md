@@ -1225,13 +1225,13 @@ display: inline-block;
 
 * 大部分可替换元素，为行盒，但是可替换元素更类似于行块盒，可设置宽高。
 
-  * img是inline（行块盒），但是可以设置宽高。
+  * img是inline（行盒），但是可以设置宽高。
   * img的border是垂直水平都占据尺寸的（像行块盒）。
   * img的适应方式：object-fit  值：contain（宽高比例不变，但图片要完全在盒子里——盒子里会有留白），fill（图片铺满，不保持比例），cover（比例不变，区域填满——图片部分不显示）
 
   * ing的宽高是自适应。如果你设置了宽度，高度会按比例增加。但是如果你都设了，就按你的来。
 
-## 10. 常规流
+## 10. 常规流 normal flow
 
 盒模型：单个盒子的规则
 
@@ -1244,6 +1244,8 @@ display: inline-block;
 3. 定位
 
 #### 10.1 常规流
+
+Flow layout or Normal flow
 
 常规流 = 文档流 = 普通文档流 = 常规文档流
 
@@ -1551,8 +1553,8 @@ img元素是属于HTML的概念
 
 3. background-size: （类似于object-fit)
 
-   * contain 保证图片完整显示，比例不变
-   * cover 保证图片撑满，比例不变
+   * contain 保证图片完整显示，比例不变（盒子有空白）
+   * cover 保证图片撑满，比例不变（图片显示不完全）
    * 100% 100% 横向100%，纵向100%
 
 4. background-position:
@@ -2281,7 +2283,7 @@ body元素的背景：如果HTML元素有背景，body元素正常（背景覆�
 
 （比如checkbox和span文字不对齐）
 
-给没有对齐的行盒元素设置vertical-align
+给没有对齐的行盒元素设置**vertical-align**
 
 * 预设值：middle、bottom、top（中下上基线对齐）
 * 数值：-10px
