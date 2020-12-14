@@ -17,7 +17,13 @@ section:nth-child(2n){
 .group .a_style:hover,
 .group .right .cat_a:hover,
 .time .time_aside a:hover,
-.read .a_style:hover{
+.read .a_style:hover,
+.music .a_style:hover,
+.pin .left h2 a:hover,
+.city .a_style:hover,
+.music .left .section_title a:hover,
+.city .left .section_title a:hover,
+.city .right ul .label a:hover{
     color: #fff;
 }
 /* 统一container 宽度 + 居中 + padding + 下margin*/
@@ -167,11 +173,12 @@ h2{
     background-position: right;
 }
 /* ----- register section ------ */
+/* 计算background位置 */
 .register{
     height: 304px;
     background: url(../imgs/rigister_background.png) no-repeat  #edf4ed;
     background-size: contain;
-    background-position: 25%;
+    background-position: calc(50% - 305px) top;
     margin-bottom: 25px;
 }
 .register .reg_container{
@@ -408,9 +415,11 @@ h2{
     width: 103px;
     margin: 0 auto 4px auto;
 }
+
+/* ===== 统一star ===== */
 /* 雪碧图：背景图的位移 - background-position: x轴50px y轴150px; */
 /* 本雪碧图，高121，每一层高度11px 用y轴负数 */
-.movie .main .movie_list .item  .ranking .star{
+.star{
     display: inline-block;
     width: 55px;
     height: 11px;
@@ -418,18 +427,27 @@ h2{
 }
 /* 这里不能用:nth-child 因为不是子元素 更好的办法就是写新的类属性加进html元素中去 */
 /* 这里，只写.star80权重不够，必须把前面的类选择器都加上 同权重写在后面的有效 */
-.movie .main .movie_list .item  .ranking .star80{
+.star85,
+.star90{
+    background-position: 0 -11px;
+}
+.star80{
     background-position: 0 -22px;
 }
-.movie .main .movie_list .item  .ranking .star75{
+.star75{
     background-position: 0 -33px;
 }
-.movie .main .movie_list .item  .ranking .star60{
+.star60{
     background-position: 0 -44px;
 }
-.movie .main .movie_list .item  .ranking .star40{
+.star40{
     background-position: 0 -66px;
 }
+.i_star{
+    margin-left: 4px;
+    color: #e09015;
+}
+/* 因为要改HTML对应代码，懒得，下次弄 */
 .movie .main .movie_list .item .ranking i{
     margin-left: 4px;
     color: #e09015;
@@ -547,7 +565,7 @@ h2{
     margin-bottom: 10px;
 }
 .read .main ul li .title{
-    display: block;
+    display: inline-block;
     line-height: 1.45;
     margin-bottom: 4px;
 }
@@ -567,9 +585,262 @@ h2{
     margin-bottom: 4px;
     color: #666;
 }
+/* ----- music section ----- */
+.music .container{
+    padding: 40px;
+}
+.music .a_style{
+    color: #555d53;
+}
+.music .left .section_title a{
+    color: #f38c00;
+}
+.music .left .nav li{
+    font-size: 14;
+    margin-top: 5px;
+}
+.music .left .apps{
+    margin-top: 30px;
+}
+.music .left .apps li{
+    margin-top: 15px;
+}
+.music .left .apps li .app_img{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url(../imgs/icon/app_icons_50_10.jpg);
+    margin-bottom: 6px;
+}
+.music .left .apps li:nth-child(1) .app_img{
+    background-position: -250px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #999;
+}
+.music .left .apps li:nth-child(2) .app_img{
+    background-position: -50px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px #999;
+}
+/* 遇到挫折。。。 */
+.music .right ol li{
+    color: #000;
+    list-style-type: decimal;
+    list-style-position: outside;
+    margin-left: 13px;
+}
+.music .right ol li p{
+    color: #999;
+}
+.music .right ol li .mus_img{
+    float: left;
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.music .right ol li .mus_img a:hover{
+    background: none;
+}
+.icon{
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+}
+.icon-bg{
+    width: 49px;
+    height: 49px;
+    margin: -24px 0 0 -24px;
+    background: #222;
+    opacity: .85;
+}
+.icon-play{
+    width: 9px;
+    height: 11px;
+    margin: -6px 0 0 -4px;
+    background: url(../imgs/icon/ic_bg_play.png) no-repeat 0 0;
+}
 
 
+.main .new_music ol li,
+.main .hot_music ul li{
+    float: left;
+    width: 24.8%;
+    margin-bottom: 4px;
+    text-align: center;
+    position: relative;
+}
+.main .new_music ol li a:first-child,
+.main .hot_music ul li a{
+    display: block;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+}
+.main .new_music ol li .new_m_title,
+.main .hot_music ul li p{
+    margin-bottom: 4px;
+}
+.main .new_music ol li a img,
+.main .hot_music ul li a img{
+    width: 80px;
+}
+.main .hot_music ul li p{
+    font-size: 13px;
+}
+.main .hot_music ul li i{
+    position: absolute;
+    background: url(../imgs/icon/timeline-player-cover.png) no-repeat;
+    width: 80px;
+    height: 80px;
+    left: 44px;
+    top: 18px;
+    opacity: .8;
+}
+.main .hot_music ul li:nth-child(4){
+    margin-bottom: 30px;
+}
 
+/* ----- pin section ----- */
+.pin .left h2 a{
+    color: #1f9432;
+}
+.pin .aimg{
+    display: block;
+}
+.pin .right .aimg{
+    width: 100%;
+    height: 95px;
+    background: url(../imgs/pin_adv.jpg) no-repeat;
+}
+.pin .aimg:hover{
+    opacity: .8;
+}
+.pin .right div{
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+.pin .right p{
+    width: 100%;
+    color: #6A6A6A;
+}
+.pin .right p span{
+    display: inline-block;
+    width: 50%;
+}
+.pin .right p span:nth-child(1){
+    text-align: left;
+}
+.pin .right p span:nth-child(2){
+    text-align: right;
+}
+.pin .right ul li{
+    margin-bottom: 14px;
+}
+.pin .right ul li a{
+    font-size: 14px;
+}
+.pin .main ul li{
+    float: left;
+    width: 240px;
+    margin: 0 20px 30px 0;
+}
+/* background缩写 */
+.pin .main ul li .aimg{
+    background: url(https://img3.doubanio.com/img/files/file-1600251064-1.jpg) center / cover no-repeat;
+    width: 100%;
+    height: 220px;
+}
+.pin .main ul li:nth-child(2) .aimg{
+    background: url(https://img3.doubanio.com/img/files/file-1603878070-0.jpg)  center / cover no-repeat;
+}
+.pin .main ul li:nth-child(3) .aimg{
+    background: url(https://img3.doubanio.com/img/files/file-1603878070-1.jpg)  center / cover no-repeat;
+}
+.pin .main ul li:nth-child(4) .aimg{
+    background: url(https://img2.doubanio.com/img/files/file-1603878070-2.jpg)  center / cover no-repeat;
+}
+.pin .main ul li p{
+    width: 100%;
+    position: relative;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.pin .main ul li p span{
+    display: block;
+    width: 20%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    color: #E55457;
+}
+
+/* ----- city scetion ----- */
+.city .container{
+    padding: 40px 0 20px 0;
+}
+.city .container{
+    margin-bottom: 0;
+}
+.city .a_style{
+    color: #643;
+}
+.city .left .section_title a{
+    color: #ec5303;
+}
+.city .left ul li{
+    margin-top: 5px;
+    font-size: 14px;
+}
+.city .right div{
+    width: 100%;
+    margin-left: -10px;
+}
+.city .right ul{
+    margin-bottom: 10px;
+}
+.city .right ul .label{
+    display: block;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 2px;
+}
+.city .right ul .label a{
+    color: #333;
+}
+.city .right ul li{
+    float: left;
+    margin-left: 10px;
+}
+.city .main ul{
+    margin-left: -20px;
+}
+.city .main ul li{
+    float: left;
+    width: 248px;
+    margin: 0 0 20px 20px;
+}
+.city .main ul li .pic{
+    float: left;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.city .main ul li .pic img{
+    /* display: inline-block; */
+    width: 70px;
+    height: 90px;
+}
+.city .main ul li .title a{
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+.city .main ul li .title p{
+    color: #666;
+}
 
 footer .hr{
     width: 100%;
@@ -577,14 +848,14 @@ footer .hr{
     margin-bottom: 14px;
     margin-top: 30px;
 }
-footer .left{
+footer .f_left{
     float: left;
     color: #999;
 }
-footer .left span img{
+footer .f_left span img{
     vertical-align: text-bottom;
 }
-footer .f_left{
+footer .f_right{
     float: right;
 }
 footer .f_right img{
